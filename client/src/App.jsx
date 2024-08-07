@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
+  const [city, setCity] = useState([])
   const country = [
     {
       name: 'India',
@@ -20,11 +21,26 @@ function App() {
     }
   ];
    
-
+  const handleCityChange = (e) => {
+    setCity(country[e.target.value].city)
+  }
   return (
     <>
      <div className="">
-      {country.map}
+      <select onChange={handleCityChange} name="" id="">
+        {country.map((item, i) => (
+          <option value={i} key={i}>
+            {item.name}
+          </option>
+        ))}
+      </select>
+      <select name="" id="">
+        {city.length && city.map((item, i) => (
+          <option value="" key={i}>
+            {item}
+          </option>
+        ))}
+      </select>
      </div>
     </>
   )
