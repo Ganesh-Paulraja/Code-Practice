@@ -1,3 +1,4 @@
+
 const numbers = {
   age: 15,  
   name: 'raj',
@@ -30,5 +31,32 @@ const dataArray = [
   }
 ];
 
+// arrFun();
+
+// var arrFun = () => {
+//   console.log('arrow')
+// }
 
 
+// closure
+function outerfunction (outVariable) {
+  console.log('outer fucntion running');
+  
+  const innerfunction = (innerVariable) => {
+    console.log(outVariable);
+    console.log(innerVariable); 
+  }
+  return innerfunction
+}
+
+const func = outerfunction('outer value');
+func('inner value') //--> even I am accessing second fucntion first function data availiable here
+
+//Palindrom check
+const PalindromCheck = (str) => {
+  const reverseStr = str.split('').reverse().join(''); // semicolon must
+  (str === reverseStr) 
+  ? console.log('This string is palindrom') 
+  : console.log('This string is not palindrom');
+}
+// PalindromCheck('dom')
