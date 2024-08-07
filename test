@@ -1,0 +1,12 @@
+// else if (i === 8) {
+          //   console.log(childValue);
+          //   const exvalue = childValue[4];
+          //   const exvalueTwo = childValue[5];
+          //   const exvalueThree = childValue[7];
+          //   childValue.splice(7, 1);
+          //   childValue.splice(5, 1);
+          //   childValue.splice(4, 1);
+          //   kidApply(exvalue, ele);
+          //   kidApply(exvalueTwo, ele);
+          //   kidApply(exvalueThree, ele);
+          // }
