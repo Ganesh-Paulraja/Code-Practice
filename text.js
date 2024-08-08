@@ -76,3 +76,8 @@ function scopeFunction () {
   console.log(height , weight);
 }
 // scopeFunction()
+
+// arrowFucntion()
+const arrowFucntion = () => {
+  console.log('arrowFunction')
+}
