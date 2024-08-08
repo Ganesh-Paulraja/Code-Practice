@@ -1,35 +1,35 @@
 
-const numbers = {
-  age: 15,  
-  name: 'raj',
-  gender: 'male',
-};
+// const numbers = {
+//   age: 15,  
+//   name: 'raj',
+//   gender: 'male',
+// };
 
-function printNumber ({ age, ...rest }) {
-  console.log(age);
-  console.log(rest);
-}
+// function printNumber ({ age, ...rest }) {
+//   console.log(age);
+//   console.log(rest);
+// }
 
-printNumber(numbers);
+// printNumber(numbers);
 
-const dataArray = [
-  {
-    name: '1new',
-    child: [1,2,3,4,5]
-  },
-  {
-    name: '1new',
-    child: [1,2,3]
-  },
-  {
-    name: '3new',
-    child: []
-  },
-  {
-    name: '4new',
-    child: [1,2,3,4]
-  }
-];
+// const dataArray = [
+//   {
+//     name: '1new',
+//     child: [1,2,3,4,5]
+//   },
+//   {
+//     name: '1new',
+//     child: [1,2,3]
+//   },
+//   {
+//     name: '3new',
+//     child: []
+//   },
+//   {
+//     name: '4new',
+//     child: [1,2,3,4]
+//   }
+// ];
 
 // arrFun();
 
@@ -49,8 +49,14 @@ function outerfunction (outVariable) {
   return innerfunction
 }
 
-const func = outerfunction('outer value');
-func('inner value') //--> even I am accessing second fucntion first function data availiable here
+x = 15;
+// console.log(x);
+
+
+var x = 10;
+
+// const func = outerfunction('outer value');
+// func('inner value') //--> even I am accessing second fucntion first function data availiable here
 
 //Palindrom check
 const PalindromCheck = (str) => {
@@ -60,3 +66,13 @@ const PalindromCheck = (str) => {
   : console.log('This string is not palindrom');
 }
 // PalindromCheck('dom')
+
+function scopeFunction () {
+  var age = 18;
+  if (age === 18) {
+    var height = 5.5;
+    // let weight = 58;
+  }
+  console.log(height , weight);
+}
+// scopeFunction()
