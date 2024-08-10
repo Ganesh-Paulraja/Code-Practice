@@ -28,7 +28,13 @@ arr2[2] = 100;
 const pocketMoney = [1, 2, 3, 4, 5];
 
 // const totalMoney = pocketMoney.reduce((total, money) => total + money, 0);
-const totalMoney = pocketMoney.reduce((val, i) => {
-  console.log(val);
-})
+// const totalMoney = pocketMoney.reduce((val, i) => {
+//   console.log(val);
+// })
 // console.log(totalMoney);
+
+
+const person = 'rahul kumar'
+const res = [...new Set(person.split(''))]
+console.log(res);
+
