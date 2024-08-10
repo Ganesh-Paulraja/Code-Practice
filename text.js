@@ -49,14 +49,14 @@ function outerfunction (outVariable) {
   return innerfunction
 }
 
+// const func = outerfunction('outer value');
+// func('inner value') //--> even I am accessing second fucntion first function data availiable here
+
 x = 15;
 // console.log(x);
 
 
 var x = 10;
-
-// const func = outerfunction('outer value');
-// func('inner value') //--> even I am accessing second fucntion first function data availiable here
 
 //Palindrom check
 const PalindromCheck = (str) => {
