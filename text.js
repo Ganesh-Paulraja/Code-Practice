@@ -81,3 +81,11 @@ function scopeFunction () {
 const arrowFucntion = () => {
   console.log('arrowFunction')
 }
+
+
+const arr = [1, 2, 3, 4, 5];
+const arrTwo = [6, 7, 8, 9];
+// arr.forEach((val, i , arr) => {
+  
+// })
+console.log( arr)
