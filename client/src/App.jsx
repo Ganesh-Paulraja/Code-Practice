@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import AxiosMap from './AxiosMap/AxiosMap';
 
 function App() {
   const [city, setCity] = useState([])
@@ -42,6 +43,7 @@ function App() {
         ))}
       </select>
      </div>
+     <AxiosMap/>
     </>
   )
 }
