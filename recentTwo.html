@@ -1,0 +1,375 @@
+<style>
+  .off-canvas--main-content .divider.bottom-margin {
+    position: relative;
+  }
+  .off-canvas--main-content .divider.bottom-margin:after {
+    /* background: #ebebeb;*/
+    background: red;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+  .cc-rv-57464782 {
+    display: none;
+    opacity: 0;
+    margin: 0 auto 0px;
+    max-width: 270px;
+    padding-bottom: 45px;
+    @media screen and (min-width: 599px) {
+      height: 690px;
+    }
+    .cc-rv-recentview {
+      background: #fff;
+      width: 100%;
+      transition: 0.6s;
+      z-index: 9;
+      display: flex;
+      flex-wrap: wrap;
+      @media screen and (min-width: 599px) {
+        transform: scale(1.5) translateY(70px);
+      }
+      .cc-rv-bottom-sec {
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        width: 100%;
+        span {
+          font-weight: 600;
+          font-size: 19px;
+          letter-spacing: 1px;
+          color: #000;
+          text-transform: uppercase;
+          @media screen and (min-width: 599px) {
+            font-size: 16px;
+          }
+        }
+        img {
+          width: 15px;
+        }
+      }
+      .cc-rv-viewed-content {
+        background: #ffffff;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        font-size: 0px;
+        display: flex;
+        .cc-rv-products {
+          margin: 0 auto -5px;
+          position: relative;
+          width: 95%;
+          .cc-rv-prev {
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            cursor: pointer;
+            display: none;
+            @media screen and (max-width: 330px) {
+              left: -7px;
+            }
+            @media screen and (min-width: 599px) {
+              left: -45px;
+            }
+            a {
+              width: 15px;
+              position: relative;
+              left: 0px;
+              top: 10px;
+            }
+            img {
+              width: 15px;
+            }
+            img.cc-rv-last {
+              display: none;
+            }
+          }
+          .cc-rv-next {
+            position: absolute;
+            top: 50%;
+            right: -30px;
+            cursor: pointer;
+            display: none;
+            @media screen and (max-width: 330px) {
+              right: -7px;
+            }
+            @media screen and (min-width: 599px) {
+              right: -45px;
+            }
+            img {
+              width: 15px;
+              position: relative;
+              left: 0px;
+              top: 0px;
+            }
+            img.cc-rv-last {
+              display: none;
+            }
+          }
+          .cc-rv-next.cc-wl-slide-inactive {
+            img.cc-rv-last {
+              display: block;
+              opacity: 0.5;
+              pointer-events: none;
+            }
+            img.cc-rv-first {
+              display: none;
+            }
+          }
+          .cc-rv-prev.cc-wl-slide-inactive {
+            img.cc-rv-last {
+              display: block;
+              opacity: 0.5;
+              pointer-events: none;
+            }
+            img.cc-rv-first {
+              display: none;
+            }
+          }
+          .cc-rv-product-items div {
+            margin: 0 auto;
+          }
+          .cc-rv-product-items {
+            .cc-rvp-product {
+              margin: 0 auto;
+              padding: 0 5px;
+              @media screen and (min-width: 599px) {
+                padding: 0 12px;
+              }
+              .cc-rvp-product-image {
+                width: 100%;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+              img {
+                margin: 0 auto;
+                display: block;
+                max-height: 100%;
+              }
+              .cc-rvp-product-name {
+                a {
+                  display: block;
+                  text-align: center;
+                  color: #111;
+                  margin: 0 auto;
+                  padding: 0.5em 0;
+                  font-family: Karla, Helvetica, Arial, sans-serif;
+                  font-weight: 400;
+                  padding-bottom: 0;
+                  text-transform: uppercase;
+                  letter-spacing: 1px;
+                  line-height: 1.6;
+                  font-size: 12px;
+                  text-decoration: none;
+                  max-width: 180px;
+                  min-height: 96px;
+                  @media screen and (max-width: 500px) {
+                    min-height: auto;
+                    font-size: 16.3px;
+                  }
+                }
+              }
+              .cc-rvp-product-price {
+                font-weight: 500;
+                text-align: center;
+                color: #00aeef;
+                font-family: Lato, Helvetica, Arial, sans-serif;
+                font-size: 2.1rem;
+                @media screen and (min-width: 599px) {
+                  font-size: 16px;
+                }
+              }
+              .cc-rvp-view-product {
+                a {
+                  display: block;
+                  background: #00aeef;
+                  color: #fff;
+                  width: 113px;
+                  text-transform: uppercase;
+                  margin: auto;
+                  padding: 10px 0;
+                  font-size: 10px;
+                  text-decoration: none;
+                  text-align: center;
+                  font-weight: 500;
+                  margin-top: 10px;
+                  border-radius: 0;
+                  img {
+                    display: inline-block;
+                    max-height: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+  .cc-recent-view {
+    .cc-rv-57464782 {
+      display: block !important;
+      opacity: 1 !important;
+    }
+  }
+</style>
+<cc-snippet name="recent">
+  <div class="cc-rv-57464782">
+    <div class="cc-rv-recentview">
+      <div class="cc-rv-bottom-sec">
+        <span>Recently Viewed </span>
+      </div>
+      <div class="cc-rv-viewed-content">
+        <div class="cc-rv-products">
+          <div class="cc-rv-prev">
+            <img class="cc-rv-first" src="https://cdn.convertcart.com/uploads/9c072302.svg" alt="RecentlyViewed" />
+            <img class="cc-rv-last" src="https://cdn.convertcart.com/uploads/9c072302.svg" alt="RecentlyViewed" />
+          </div>
+          <div class="cc-rv-next">
+            <img class="cc-rv-first" src="https://cdn.convertcart.com/uploads/55785ebb.svg" alt="RecentlyViewed" />
+            <img class="cc-rv-last" src="https://cdn.convertcart.com/uploads/55785ebb.svg" alt="RecentlyViewed" />
+          </div>            
+          <div class="cc-rv-product-items">
+          </div>     
+        </div>
+      </div>
+    </div>
+  </div>
+</cc-snippet>
+<cc-snippet name="product">
+  <div class="cc-rvp-product">
+    <div class="cc-rvp-product-inner">
+      <a class="cc-rvp-product-image" href="#">
+        <img alt="RecentlyViewed" />
+      </a>
+      <div class="cc-rvp-earth-new">
+      <div class="cc-rvp-product-name"><a href=""></a></div>
+      <div class="cc-rvp-product-price">$<span></span></div>
+      </div>
+      <div class="cc-rvp-view-product">
+        <a class="cc-rvp-link" href="#">
+          View Product
+        </a>
+      </div>
+    </div>
+  </div>
+</cc-snippet>
+<script wait-for=".footer">
+  var $ = require('zepto');
+  const Siema = require('siema');
+  let products = [];
+  const currency = Shopify.currency.active;
+  const ccObjwidth = $(window).width();
+  const ccObj = $('.cc-rv-viewed-content');
+
+  const currencyMap = {
+    GBP: { symbol: '£', extra: 'GBP' },
+    EUR: { symbol: '€', extra: 'EUR' },
+    JPY: { symbol: '¥', extra: 'JPY' },
+    AUD: { symbol: '$', extra: 'AUD' },
+    USD: { symbol: '$', extra: 'USD' },
+    INR: { symbol: 'Rs. ', extra: '' },
+    CAD: { symbol: '$', extra: 'CAD' },
+  };
+
+  const { ctx, snippets } = campaign;
+  ctx.ccart('get', 'productsViewed', (iproducts) => {
+    products = iproducts.slice(-12) || [];
+
+    function loadCampaign() {
+      if (!products.length) return;
+
+      $('.cc-rv-57464782').show();
+      $('body').addClass('cc-recent-view');
+
+      products.forEach((val) => {
+        const ccObjproduct = $(snippets.product);
+
+        ccObjproduct.find('.cc-rvp-product-image img').attr('src', val.image);
+        ccObjproduct.find('a').attr('href', val.url);
+        ccObjproduct.find('.cc-rvp-product-name a').text(val.name.length > 50 ? `${val.name.substr(0, 50)}...` : val.name);
+
+        const { symbol = '$', extra = '' } = currencyMap[currency] || { symbol: '$', extra: 'USD' };
+        const priceText = currency === 'JPY' ?
+          `${symbol}<span>${Math.round(val.price.toFixed(2))}</span>`
+          : `${symbol}<span>${val.price.toFixed(2)}</span>`;
+
+        ccObjproduct.find('.cc-rvp-product-price').html(priceText);
+        ccObjproduct.prependTo('.cc-rv-product-items');
+      });
+      const ccObjnext = $('.cc-rv-viewed-content .cc-rv-next');
+      const ccObjprev = $('.cc-rv-viewed-content .cc-rv-prev');
+      function ccSliderCallBack() {
+        var ccObjActiveSlide = this.currentSlide + 1;
+        var ccObjlastChild = products.length;
+        if (ccObjwidth <= 991) {
+          if (ccObjActiveSlide == ccObjlastChild - 2) {
+            ccObjnext.addClass('cc-wl-slide-inactive');
+          } else {
+            ccObjnext.removeClass('cc-wl-slide-inactive');
+          }
+        } else {
+          if (ccObjActiveSlide == ccObjlastChild - 3) {
+            ccObjnext.addClass('cc-wl-slide-inactive');
+          } else {
+            ccObjnext.removeClass('cc-wl-slide-inactive');
+          }
+        }
+        if (ccObjActiveSlide == 1) {
+          ccObjprev.addClass('cc-wl-slide-inactive');
+        } else {
+          ccObjprev.removeClass('cc-wl-slide-inactive');
+        }
+      }
+      const slider = new Siema({
+        selector: $('.cc-rv-product-items').get(0),
+        loop: false,
+        draggable: true,
+        multipleDrag: true,
+        perPage: {
+          500: 2,
+          992: 4,
+          1200: 4,
+        },
+        onInit: ccSliderCallBack,
+        onChange: ccSliderCallBack,
+      });
+      const pitems = products.length;
+      if (ccObjwidth < 991 && pitems > 3) {
+        ccObjnext.show();
+        ccObjprev.show();
+      } else if (pitems > 4) {
+        ccObjnext.show();
+        ccObjprev.show();
+      }
+
+      ccObjnext.on('click', () => {
+        slider.next();
+        campaign.trigger('Clicked.next');
+      });
+
+      ccObjprev.on('click', () => {
+        slider.prev();
+        campaign.trigger('Clicked.previous');
+      });
+      $('.cc-rvp-product .cc-rvp-product-image').on('click', () => campaign.trigger('clicked.product image'));
+      $('.cc-rvp-product .cc-rvp-product-name').on('click', () => campaign.trigger('clicked.product title'));
+      $('.cc-rvp-product .cc-rvp-view-product').on('click', () => campaign.trigger('clicked.view now'));
+
+      $('.cc-rv-57464782').css('opacity', '1');
+    }
+    setTimeout(() => {
+      $('footer.footer').before(campaign.snippets.recent);
+      loadCampaign();
+    }, 400);
+  });
+
+  $('#addtocartbutton').on('click', () => {
+    campaign.trigger('clicked.add to cart');
+  });
+</script>
