@@ -6,7 +6,7 @@ const asyncHandler = require('express-async-handler')
 //@access public
 
 const getContacts = asyncHandler(async (req, res) => {
-  const contacts = await contactModel.find();
+  const contacts = await contactModel.find({ user_id: req.user.id });
   if (!contacts) {
     res.status(404);
     throw new Error("Contacts not found");
