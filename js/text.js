@@ -36,6 +36,11 @@
 // var arrFun = () => {
 //   console.log('arrow')
 // }
+hostingFun()
+
+function hostingFun () {
+  console.log('hosting');
+}
 
 
 // closure
