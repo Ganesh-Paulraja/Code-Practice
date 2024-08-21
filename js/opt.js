@@ -38,3 +38,4 @@ const person = 'rahul kumar'
 const res = [...new Set(person.split(''))]
 console.log(res);
 
+// forEach vs map

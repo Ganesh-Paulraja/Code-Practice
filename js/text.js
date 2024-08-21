@@ -94,3 +94,9 @@ const arrTwo = [6, 7, 8, 9];
   
 // })
 console.log( arr)
+
+
+app.options('/users', (req, res) => {
+  res.set('Allow', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.sendStatus(204); // No content
+});
