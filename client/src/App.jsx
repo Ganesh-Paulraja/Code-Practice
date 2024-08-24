@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import AxiosMap from './AxiosMap/AxiosMap';
+import SpinWeel from './components/SpinWeel/SpinWeel';
 
 function App() {
   const [city, setCity] = useState([])
@@ -43,7 +44,8 @@ function App() {
         ))}
       </select>
      </div>
-     <AxiosMap/>
+     {/* <AxiosMap/> */}
+     <SpinWeel/>
     </>
   )
 }

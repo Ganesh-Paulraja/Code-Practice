@@ -1,0 +1,317 @@
+// Variables (if needed, define your color or other reusable variables here)
+
+// Global Styles
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.cc-spin-wheel-section {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 430px;
+  margin: auto;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  .cc-spin-wheel-border {
+    position: relative;
+    background: url('https://cdn.convertcart.com/uploads/c07a5acb.png') no-repeat;
+    background-size: 430px 430px;
+    height: 430px;
+    width: 430px;
+  }
+
+  .cc-spin-wheel {
+    position: relative;
+    top: 20px;
+    left: 1px;
+    background: url('https://cdn.convertcart.com/uploads/4bba53b8.png') no-repeat;
+    background-size: cover;
+    width: 390px;
+    height: 390px;
+    margin: auto;
+    border-radius: 50%;
+    transition: all 6s cubic-bezier(0, 0.99, 0.44, 0.99);
+
+    .cc-coupon-text {
+      position: absolute;
+      font-size: 24px;
+      text-align: center;
+      line-height: normal;
+      color: #fff;
+
+      span {
+        display: block;
+        font-weight: 500;
+      }
+
+      span:nth-child(2) {
+        font-size: 16px;
+      }
+    }
+
+    .cc-text1 { top: 37px; right: 118px; transform: rotate(24deg); }
+    .cc-text2 { top: 115px; right: 40px; transform: rotate(66deg); }
+    .cc-text3 { top: 232px; right: 36px; font-size: 18px; transform: rotate(112deg); line-height: 1; }
+    .cc-text4 { bottom: 40px; right: 118px; transform: rotate(158deg); }
+    .cc-text5 { bottom: 42px; left: 116px; transform: rotate(204deg); }
+    .cc-text6 { bottom: 124px; left: 38px; font-size: 16px; transform: rotate(250deg); line-height: 1; }
+    .cc-text7 { top: 112px; left: 40px; font-size: 16px; transform: rotate(294deg); .cc-text-small { font-size: 11px !important; } }
+    .cc-text8 { top: 38px; left: 124px; transform: rotate(-23deg); .cc-text-small { font-size: 11px; } }
+  }
+
+  .cc-spin-wheel.cc-spin-refresing {
+    transform: rotate(2140deg);
+    transition: none !important;
+  }
+
+  .cc-spin-marker {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 3;
+  }
+
+  .cc-eop-page1 {
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+
+    button {
+      background: #e60000;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      min-width: 170px;
+      padding: 12px;
+      margin: 0 auto;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+.cc-spin-wheel-content {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  transform: translateY(-50%);
+  border-radius: 10px;
+
+  .cc-eop-page {
+    &.cc-eop-page2 {
+      text-align: center;
+      padding: 40px 20px 50px;
+
+      h2 { margin: 0 0 20px; }
+
+      .cc-sub-text {
+        color: #000;
+        font-size: 20px;
+        line-height: 1.2;
+
+        span {
+          color: #e60000;
+          font-weight: 600;
+          text-decoration: underline;
+        }
+      }
+
+      .cc-email-text {
+        color: #000;
+        font-size: 15px;
+        margin-top: 22px;
+      }
+
+      .cc-form-row {
+        position: relative;
+      }
+
+      form {
+        margin: 10px auto 0;
+      }
+
+      #cc-emailID {
+        display: block;
+        background: url(https://cdn.convertcart.com/uploads/9a467901.png) no-repeat, #fff;
+        background-position: left 10px center;
+        font-size: 15px;
+        color: #000;
+        width: 100%;
+        height: 42px;
+        line-height: 42px;
+        padding: 10px 150px 10px 45px;
+        margin: 0;
+        outline: none;
+        -webkit-appearance: none;
+        border-radius: 3px 0 0 3px;
+        border: 1px solid #ddd;
+      }
+
+      ::placeholder { color: #6c757e; }
+      ::-webkit-placeholder { color: #6c757e; }
+
+      button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 140px;
+        min-width: 140px;
+        height: 42px;
+        padding: 5px 10px;
+        border-radius: 0 3px 3px 0;
+      }
+
+      #cc-offer-consent {
+        label {
+          display: table;
+          margin: 5px 0 0;
+          line-height: normal;
+
+          input, span {
+            display: table-cell;
+            vertical-align: middle;
+            margin: 0;
+            cursor: pointer;
+          }
+
+          span {
+            font-size: 13px;
+            text-align: left;
+            padding-left: 7px;
+
+            a {
+              color: #4d4d4d;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      .cc-btn-submit--disable {
+        background: #c0c0c0 !important;
+      }
+    }
+
+    &.cc-eop-page3 {
+      display: none;
+      text-align: center;
+      padding: 40px 20px 50px;
+
+      h2 { font-size: 32px; }
+
+      .cc-sub-text {
+        color: #484848;
+        font-size: 16px;
+        margin-top: 20px;
+        line-height: 1.4;
+
+        span {
+          font-weight: 600;
+          text-decoration: underline;
+        }
+      }
+
+      .cc-coupon-code-section {
+        background: #000;
+        width: 200px;
+        padding: 6px;
+        margin: 25px auto 18px;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .cc-coupon-code {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 5px;
+        padding: 7px;
+        border: 2px dashed #fff;
+      }
+
+      button {
+        min-width: 230px;
+        padding: 14px;
+        margin: 15px auto 0;
+      }
+    }
+  }
+}
+
+.cc-spin-close-spin {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  z-index: 10;
+  cursor: pointer;
+
+  img { width: 15px; }
+}
+
+.cc-spin-close {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  z-index: 5;
+  cursor: pointer;
+
+  img { display: block; }
+}
+
+// Widget Styles
+#rand-id-widget {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  #rand-id-backdrop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.76);
+    z-index: 1000;
+  }
+
+  #rand-id-iwrap {
+    position: relative;
+    z-index: 1000;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+
+    #rand-id-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+  }
+}
